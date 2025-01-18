@@ -13,7 +13,7 @@ const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChan
           value={amount}
           onChange={handleAmountChange}
         />
-        PLN to
+        PLN
         <select
           className="form__select"
           name="currencies"
@@ -30,7 +30,7 @@ const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChan
         <button type="submit" className="form__button">
           Convert
         </button>
-        <button type="button" onClick={onReset}>
+        <button type="button" className="form__button" onClick={onReset}>
           Reset form
         </button>
       </p>
