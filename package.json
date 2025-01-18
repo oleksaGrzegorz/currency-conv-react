@@ -2,8 +2,10 @@
   "name": "currency-conv-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oleksagrzegorz.github.io/currency-conv-react/",
   "dependencies": {
     "cra-template": "1.2.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1"
