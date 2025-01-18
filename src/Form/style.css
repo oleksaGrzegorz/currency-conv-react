@@ -1,0 +1,15 @@
+.form {
+  background-image: url('images/money.png');
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form__legend {
+  font-size: 30px;
+  background-color: aliceblue;
+  padding: 2px;
+  text-align: center;
+}
