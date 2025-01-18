@@ -1,5 +1,6 @@
 # Currency Converter
-<img width="1259" alt="Zrzut ekranu 2025-01-18 o 19 26 05" src="https://github.com/user-attachments/assets/86d27004-0e51-4b86-b59e-ac13bf990225" />
+<img width="1263" alt="Zrzut ekranu 2025-01-18 o 19 32 59" src="https://github.com/user-attachments/assets/71877ca1-9c7a-42d9-bc81-d6b269c81130" />
+
 
 LINK: https://oleksagrzegorz.github.io/currency-conv-react/
 
