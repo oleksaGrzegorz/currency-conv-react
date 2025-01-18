@@ -1,3 +1,5 @@
+import "./style.css";
+
 const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChange, onSubmit, onReset }) => (
     <form className="form" onSubmit={onSubmit}>
       <legend className="form__legend">Currency converter</legend>
