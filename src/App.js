@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import Container from "./Container";
 import Form from "./Form";
+import Clock from "./Clock";
 
 function App() {
   const [amount, setAmount] = useState("");
@@ -56,6 +57,7 @@ function App() {
           onSubmit={calculateResult}
           onReset={handleReset}
         />
+        <Clock/>
       </Container>
     </div>
   );
