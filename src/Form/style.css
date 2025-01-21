@@ -1,30 +1,58 @@
 .form {
   background-image: url('images/money.png');
+  background-position: center;
   background-size: cover;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 600px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid black;
 }
 
 .form__legend {
-  font-size: 30px;
-  background-color: aliceblue;
+  font-style: oblique;
+  font-size: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 60%;
   padding: 2px;
   text-align: center;
+  border: 1px dotted;
 }
 
 .form__input {
   padding: 5px;
   margin: 5px;
+  border-radius: 5px;
 }
 
 .form__select {
   padding: 5px;
   margin: 5px;
+  border-radius: 5px;
 }
 
 .form__button {
-  padding: 3px;
-  margin: 3px;
+  padding: 10px;
+  margin-left: 15px;
+  background-color: hsl(118, 63%, 66%);
+  margin-top: 350px;
+  border-radius: 5px;
+}
+
+.form__button:hover {
+  background-color: hsl(118, 63%, 80%);
+}
+
+.form__resultView {
+  background-color: rgb(180, 244, 182);
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 50%;
+  font-size: large;
+  border: 1px solid black;
+}
+
+.form__result {
+  font-weight: 900;
 }
