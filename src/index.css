@@ -12,3 +12,23 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('images/money.png');
+    background-position: left;
+  }
+}
+
+.container {
+margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 100vh;
+    margin-top: 10px;
+  }
+}

@@ -34,7 +34,7 @@ const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChan
           Reset form
         </button>
       </p>
-      <p className="form__resultView">Result:<span className="form__result">{result}</span></p>
+      <p className="form__resultView">Result: <span className="form__result">{result}</span></p>
     </form>
   );
   
