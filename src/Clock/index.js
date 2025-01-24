@@ -13,7 +13,19 @@ const Clock = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <p className="clock">{time.toLocaleString()}</p>;
+  return (
+    <p className="clock">
+      {time.toLocaleString("pl", {
+        weekday: "long",
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      })}
+    </p>
+  );
 };
 
 export default Clock;
