@@ -1,7 +1,8 @@
 import "./style.css";
+import { StyledForm } from "./styled";
 
 const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChange, onSubmit, onReset }) => (
-    <form className="form" onSubmit={onSubmit}>
+    <StyledForm onSubmit={onSubmit}>
       <legend className="form__legend">Currency converter</legend>
       <p>
         <input
@@ -35,7 +36,7 @@ const Form = ({ amount, currency, result, handleAmountChange, handleCurrencyChan
         </button>
       </p>
       <p className="form__resultView">Result: <span className="form__result">{result}</span></p>
-    </form>
+    </StyledForm>
   );
   
   export default Form;

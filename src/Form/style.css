@@ -1,15 +1,4 @@
-.form {
-  background-image: url('images/money.png');
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 10px;
-  border-radius: 15px;
-  text-align: center;
-  border: 2px solid black;
-  margin-top: 20px;
-}
+
 
 .form__legend {
   font-style: oblique;
