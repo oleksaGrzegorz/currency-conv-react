@@ -1,4 +1,5 @@
-.clock {
+import styled from "styled-components";
+export const ClockWithDate = styled.p`
     text-align: center;
     font-size: 30px;
     padding-top: 0;
@@ -8,4 +9,4 @@
     margin: 0 auto;
     border-radius: 50px;
     border: 1px solid;
-}
+    `;
