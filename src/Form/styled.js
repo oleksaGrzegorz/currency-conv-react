@@ -54,4 +54,17 @@ export const ResultView = styled.p`
   margin: 0 auto;
   max-width: 50%;
   font-size: large;
-  border: 1px solid black;`;
+  border: 1px solid black;
+`;
+
+export const Loading = styled.div`
+  background-color: white;
+  font-size: 30px;
+  height: 500px;
+  border-radius: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
