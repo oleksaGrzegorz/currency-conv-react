@@ -21,21 +21,9 @@ function App() {
       alert("Nieznana waluta");
       return;
     }
-    setResult(`${amount} PLN = ${(amount / rates[currency]).toFixed(2)} ${currency}`);
-  };
-
-  const handleAmountChange = (event) => {
-    setAmount(event.target.value);
-  };
-
-  const handleCurrencyChange = (event) => {
-    setCurrency(event.target.value);
-  };
-
-  const handleReset = () => {
-    setAmount("");
-    setCurrency("");
-    setResult("");
+    setResult(
+      `${amount} PLN = ${(amount / rates[currency]).toFixed(2)} ${currency}`
+    );
   };
 
   return (
@@ -45,12 +33,16 @@ function App() {
           amount={amount}
           currency={currency}
           result={result}
-          handleAmountChange={handleAmountChange}
-          handleCurrencyChange={handleCurrencyChange}
+          handleAmountChange={(event) => setAmount(event.target.value)}
+          handleCurrencyChange={(event) => setCurrency(event.target.value)}
           onSubmit={calculateResult}
-          onReset={handleReset}
+          onReset={() => {
+            setAmount("");
+            setCurrency("");
+            setResult("");
+          }}
         />
-        <Clock/>
+        <Clock />
       </Container>
     </div>
   );
