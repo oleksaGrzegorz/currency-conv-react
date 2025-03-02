@@ -33,6 +33,7 @@ function App() {
           amount={amount}
           currency={currency}
           result={result}
+          rates={rates}
           handleAmountChange={(event) => setAmount(event.target.value)}
           handleCurrencyChange={(event) => setCurrency(event.target.value)}
           onSubmit={calculateResult}
