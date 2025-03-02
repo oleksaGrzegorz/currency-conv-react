@@ -9,6 +9,11 @@ function App() {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState("");
   const [result, setResult] = useState("");
+  const [rates, setRates] = useState({});
+
+  useEffect(() => {
+    axios.get("/waluty.json").then((response) => setRates(response.data));
+  }, []);
 
   const EUR = 4.3;
   const USD = 5;
