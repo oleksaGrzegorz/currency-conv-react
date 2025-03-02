@@ -10,9 +10,25 @@ function App() {
   const [currency, setCurrency] = useState("");
   const [result, setResult] = useState("");
   const [rates, setRates] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("/currencies.json").then((response) => setRates(response.data));
+    setLoading(true);
+
+    const currencyFetchTimer = setTimeout(() => {
+      axios
+        .get("/currencies.json")
+        .then((response) => {
+          setRates(response.data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error(error);
+          setLoading(false);
+        });
+    }, 5000);
+
+    return () => clearTimeout(currencyFetchTimer);
   }, []);
 
   const calculateResult = (event) => {
@@ -42,6 +58,7 @@ function App() {
             setCurrency("");
             setResult("");
           }}
+          loading={loading}
         />
         <Clock />
       </Container>
