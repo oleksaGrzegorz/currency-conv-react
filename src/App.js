@@ -28,7 +28,7 @@ function App() {
           setLoading(false);
           setError("Wystąpił błąd podczas pobierania danych walutowych.");
         });
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(currencyFetchTimer);
   }, []);
