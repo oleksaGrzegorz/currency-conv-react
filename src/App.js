@@ -15,26 +15,13 @@ function App() {
     axios.get("/waluty.json").then((response) => setRates(response.data));
   }, []);
 
-  const EUR = 4.3;
-  const USD = 5;
-
   const calculateResult = (event) => {
     event.preventDefault();
-    let calculatedResult;
-
-    switch (currency) {
-      case "EUR":
-        calculatedResult = amount / EUR;
-        break;
-      case "USD":
-        calculatedResult = amount / USD;
-        break;
-      default:
-        alert("Nieznana waluta");
-        return;
+    if (!rates[currency]) {
+      alert("Nieznana waluta");
+      return;
     }
-
-    setResult(`${amount} PLN = ${calculatedResult.toFixed(2)} ${currency}`);
+    setResult(`${amount} PLN = ${(amount / rates[currency]).toFixed(2)} ${currency}`);
   };
 
   const handleAmountChange = (event) => {
