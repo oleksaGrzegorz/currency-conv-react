@@ -15,6 +15,7 @@ const Form = ({
   handleCurrencyChange,
   onSubmit,
   onReset,
+  rates,
 }) => (
   <StyledForm onSubmit={onSubmit}>
     <Legend>Currency converter</Legend>
@@ -35,8 +36,11 @@ const Form = ({
         onChange={handleCurrencyChange}
       >
         <option value="">Select currencies</option>
-        <option value="EUR">EUR</option>
-        <option value="USD">USD</option>
+        {Object.keys(rates).map((rate) => (
+          <option key={rate} value={rate}>
+            {rate}
+          </option>
+        ))}
       </Select>
     </p>
     <p>
