@@ -12,7 +12,7 @@ function App() {
   const [rates, setRates] = useState({});
 
   useEffect(() => {
-    axios.get("/waluty.json").then((response) => setRates(response.data));
+    axios.get("/currencies.json").then((response) => setRates(response.data));
   }, []);
 
   const calculateResult = (event) => {
