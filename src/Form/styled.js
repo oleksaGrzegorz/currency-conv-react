@@ -68,3 +68,14 @@ export const Loading = styled.div`
   align-items: center;
 `;
 
+export const ErrorInfo = styled.div`
+  background-color: white;
+color: red;
+  font-size: 30px;
+  height: 500px;
+  border-radius: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

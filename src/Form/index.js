@@ -6,6 +6,7 @@ import {
   Button,
   ResultView,
   Loading,
+  ErrorInfo,
 } from "./styled";
 import loadingIcon from "./images/loading.gif";
 
@@ -19,13 +20,16 @@ const Form = ({
   onReset,
   rates,
   loading,
+  error,
 }) => (
   <StyledForm onSubmit={onSubmit}>
     <Legend>Currency converter</Legend>
     {loading ? (
       <Loading>
-          <img src={loadingIcon} alt="loading icon" />
+        <img src={loadingIcon} alt="loading icon" />
       </Loading>
+    ) : error ? (
+      <ErrorInfo>{error}</ErrorInfo>
     ) : (
       <>
         <p>

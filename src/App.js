@@ -11,9 +11,11 @@ function App() {
   const [result, setResult] = useState("");
   const [rates, setRates] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
+    setError(null);
 
     const currencyFetchTimer = setTimeout(() => {
       axios
@@ -23,8 +25,8 @@ function App() {
           setLoading(false);
         })
         .catch((error) => {
-          console.error(error);
           setLoading(false);
+          setError("Wystąpił błąd podczas pobierania danych walutowych.");
         });
     }, 5000);
 
@@ -59,6 +61,7 @@ function App() {
             setResult("");
           }}
           loading={loading}
+          error={error}
         />
         <Clock />
       </Container>
