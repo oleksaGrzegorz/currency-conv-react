@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_URL =
+  "https://api.currencyapi.com/v3/latest?apikey=cur_live_7behyffiPYIlr4oWlMABA9JTNzB3nIrrW67RxEDN";
+
 const useCurrencyRates = () => {
   const [ratesData, setRatesData] = useState({
     rates: {},
@@ -17,9 +20,7 @@ const useCurrencyRates = () => {
 
     const currencyFetchTimer = setTimeout(() => {
       axios
-        .get(
-          "https://api.currencyapi.com/v3/latest?apikey=cur_live_7behyffiPYIlr4oWlMABA9JTNzB3nIrrW67RxEDN"
-        )
+        .get(API_URL)
         .then((response) => {
           setRatesData({
             rates: response.data.data || {},
