@@ -2,7 +2,6 @@ import useCurrentDate from "./useCurrentDate";
 import { ClockWithDate } from "./styled";
 
 const formattedDate = (date) => date.toLocaleString("pl", {
-  weekday: "long",
   day: "numeric",
   month: "numeric",
   year: "numeric",
