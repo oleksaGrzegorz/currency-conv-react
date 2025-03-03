@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const ClockWithDate = styled.p`
   text-align: center;
   font-size: 30px;
