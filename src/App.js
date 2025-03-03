@@ -11,18 +11,17 @@ function App() {
   const [result, setResult] = useState("");
 
   const ratesData = useCurrencyRates();
-
   const calculateResult = (event) => {
     event.preventDefault();
     if (!ratesData.rates[currency]) {
-      alert("Nieznana waluta");
+      alert("Unknown currency");
       return;
     }
-    setResult(
-      `${amount} PLN = ${(amount / ratesData.rates[currency]).toFixed(
-        2
-      )} ${currency}`
-    );
+
+    const exchangeRate = ratesData.rates[currency].value / ratesData.rates["PLN"].value;
+    const convertedAmount = (amount * exchangeRate).toFixed(2);
+
+    setResult(`${amount} PLN = ${convertedAmount} ${currency}`);
   };
 
   return (

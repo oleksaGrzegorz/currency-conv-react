@@ -17,10 +17,12 @@ const useCurrencyRates = () => {
 
     const currencyFetchTimer = setTimeout(() => {
       axios
-        .get("/currencies.json")
+        .get(
+          "https://api.currencyapi.com/v3/latest?apikey=cur_live_7behyffiPYIlr4oWlMABA9JTNzB3nIrrW67RxEDN"
+        )
         .then((response) => {
           setRatesData({
-            rates: response.data,
+            rates: response.data.data || {},
             loading: false,
             error: null,
           });
